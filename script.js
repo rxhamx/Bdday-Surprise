@@ -41,3 +41,18 @@ petal.style.fontSize = (18+Math.random()*15)+"px";
 petals.appendChild(petal);
 
 }
+const intro = document.querySelector(".intro");
+const hero = document.getElementById("hero");
+
+document.getElementById("openBtn").onclick = () => {
+
+intro.style.display = "none";
+
+hero.style.display = "flex";
+
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
+
+};
