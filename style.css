@@ -602,3 +602,32 @@ opacity:0;
 }
 
 }
+/* ---------- TYPEWRITER CURSOR ---------- */
+
+#typeText::after{
+
+content:"|";
+
+color:#ff4f8b;
+
+font-weight:bold;
+
+animation:blink .8s infinite;
+
+}
+
+@keyframes blink{
+
+0%{
+opacity:1;
+}
+
+50%{
+opacity:0;
+}
+
+100%{
+opacity:1;
+}
+
+}
