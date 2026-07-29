@@ -473,3 +473,34 @@ transform:translateY(0px);
 }
 
 }
+@keyframes pulse{
+
+0%{
+
+transform:scale(1);
+
+}
+
+50%{
+
+transform:scale(1.08);
+
+}
+
+100%{
+
+transform:scale(1);
+
+}
+
+}
+
+.cake{
+
+animation:
+
+bounce 2s infinite,
+
+pulse 2.5s infinite;
+
+}
