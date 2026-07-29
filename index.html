@@ -5,202 +5,159 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Happy Birthday ❤️</title>
 
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
-}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-body{
-background:linear-gradient(135deg,#ffd6e8,#fff5fa);
-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-overflow:hidden;
-}
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-.container{
-background:rgba(255,255,255,.8);
-padding:40px;
-border-radius:25px;
-text-align:center;
-width:90%;
-max-width:600px;
-box-shadow:0 15px 35px rgba(0,0,0,.15);
-}
-
-h1{
-font-size:50px;
-color:#ff4f8b;
-margin-bottom:15px;
-}
-
-h2{
-color:#ff6b9d;
-margin-bottom:20px;
-}
-
-p{
-font-size:18px;
-line-height:1.8;
-color:#555;
-margin-bottom:25px;
-}
-
-button{
-padding:15px 35px;
-border:none;
-border-radius:40px;
-background:#ff5c96;
-color:white;
-font-size:18px;
-cursor:pointer;
-transition:.3s;
-}
-
-button:hover{
-transform:scale(1.05);
-background:#ff3c82;
-}
-
-.hidden{
-display:none;
-}
-
-.heart{
-position:fixed;
-bottom:-30px;
-color:#ff6b9d;
-font-size:20px;
-animation:float 8s linear infinite;
-opacity:.7;
-}
-
-@keyframes float{
-0%{
-transform:translateY(0);
-}
-100%{
-transform:translateY(-120vh) rotate(360deg);
-}
-}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="container">
+<div class="background"></div>
 
-<div id="page1">
+<div class="hearts"></div>
 
-<h1>🎂 Happy Birthday</h1>
+<div class="petals"></div>
+
+<section class="screen active" id="intro">
+
+<div class="glass">
+
+<div class="cake">🎂</div>
+
+<h1>Hey Birthday Girl...</h1>
+
+<p>
+I made something special just for you ❤️
+</p>
+
+<button id="openBtn">
+Open Your Birthday Gift 🎁
+</button>
+
+</div>
+
+</section>
+
+<section class="screen" id="hero">
+
+<div class="glass">
+
+<h1>Happy Birthday</h1>
 
 <h2>My Love ❤️</h2>
 
 <p>
-I made something small just for you.
+Today is all about celebrating someone who means so much to me.
 </p>
 
-<button onclick="nextPage()">
-Open Your Gift 🎁
+<button id="nextBtn">
+Continue ❤️
 </button>
 
 </div>
 
-<div id="page2" class="hidden">
+</section>
 
-<h1>💌</h1>
+<section class="screen" id="letter">
+
+<div class="glass">
+
+<h2>A Letter For You 💌</h2>
+
+<p id="typeText"></p>
+
+<button id="loveBtn">
+Continue 🌸
+</button>
+
+</div>
+
+</section>
+
+<section class="screen" id="love">
+
+<div class="glass">
+
+<h2>Things I Love About You ❤️</h2>
+
+<div class="cards">
+
+<div class="card">❤️<br>Your Smile</div>
+
+<div class="card">🌸<br>Your Kindness</div>
+
+<div class="card">😂<br>Your Laugh</div>
+
+<div class="card">💖<br>Your Heart</div>
+
+<div class="card">✨<br>Your Personality</div>
+
+<div class="card">🥹<br>Our Memories</div>
+
+</div>
+
+<button id="promiseBtn">
+Continue 🤍
+</button>
+
+</div>
+
+</section>
+
+<section class="screen" id="promise">
+
+<div class="glass">
+
+<h2>Our Little Promises</h2>
+
+<p>🤍 Always communicate honestly.</p>
+
+<p>💖 Always support each other.</p>
+
+<p>🌸 Keep making beautiful memories.</p>
+
+<p>✨ Keep growing together.</p>
+
+<button id="finalBtn">
+One Last Surprise 🎁
+</button>
+
+</div>
+
+</section>
+
+<section class="screen" id="final">
+
+<div class="glass">
+
+<h1>Happy Birthday ❤️</h1>
 
 <p>
 
-Happy Birthday ❤️
+Thank you for every smile.
 
 <br><br>
 
-I hope today brings you lots of happiness, smiles, and beautiful memories.
+Thank you for every memory.
 
-Thank you for being such an amazing person.
+<br><br>
 
-I appreciate every laugh, every conversation, and every moment we've shared.
-
-I hope this year gives you everything you've been wishing for.
-
-Never forget how special you are.
-
-Happy Birthday once again.
-
-❤️
+I hope today brings you happiness and that we continue making beautiful memories together.
 
 </p>
 
-<button onclick="finish()">
-One Last Thing 🌸
-</button>
+<h2>
+Will you keep making memories with me? ❤️
+</h2>
 
 </div>
 
-<div id="page3" class="hidden">
+</section>
 
-<h1>❤️</h1>
-
-<h2>Will you keep making memories with me?</h2>
-
-<p>
-
-No matter what happens,
-
-I hope we always have memories that make us smile.
-
-Happy Birthday.
-
-I love you. ❤️
-
-</p>
-
-</div>
-
-</div>
-
-<script>
-
-function nextPage(){
-
-document.getElementById("page1").classList.add("hidden");
-
-document.getElementById("page2").classList.remove("hidden");
-
-}
-
-function finish(){
-
-document.getElementById("page2").classList.add("hidden");
-
-document.getElementById("page3").classList.remove("hidden");
-
-}
-
-for(let i=0;i<25;i++){
-
-let heart=document.createElement("div");
-
-heart.className="heart";
-
-heart.innerHTML="❤️";
-
-heart.style.left=Math.random()*100+"vw";
-
-heart.style.animationDuration=(5+Math.random()*5)+"s";
-
-heart.style.animationDelay=Math.random()*5+"s";
-
-document.body.appendChild(heart);
-
-}
-
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>
