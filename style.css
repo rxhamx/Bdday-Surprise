@@ -561,3 +561,44 @@ transform:scale(1.6);
 }
 
 }
+/* ---------- CONFETTI ---------- */
+
+.confetti{
+
+position:fixed;
+
+width:10px;
+
+height:10px;
+
+top:-20px;
+
+pointer-events:none;
+
+animation:confettiFall linear forwards;
+
+}
+
+@keyframes confettiFall{
+
+0%{
+
+transform:
+translateY(0)
+rotate(0deg);
+
+opacity:1;
+
+}
+
+100%{
+
+transform:
+translateY(110vh)
+rotate(720deg);
+
+opacity:0;
+
+}
+
+}
