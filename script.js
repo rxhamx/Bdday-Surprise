@@ -102,15 +102,24 @@ showScreen("final");
 
 // TYPEWRITER
 
-const message=`Happy Birthday ❤️
+const message = `
 
-I hope today brings you happiness, peace, and lots of smiles.
+Happy Birthday, Amal ❤️
 
-Thank you for every memory we've shared together.
+I made this little gift because I wanted to remind you how special you are to me.
 
-You are truly special to me, and I hope this year brings you everything your heart wishes for.
+Thank you for every smile, every laugh, and every memory we've shared together.
 
-Happy Birthday once again. ❤️`;
+You make ordinary days feel brighter, and I'm really grateful to have you in my life.
+
+I hope today is filled with happiness, love, and everything you've been wishing for.
+
+Never forget how amazing you are.
+
+Happy Birthday once again.
+
+❤️
+`;
 
 let started=false;
 
