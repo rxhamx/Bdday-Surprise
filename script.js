@@ -121,3 +121,23 @@ letter.style.display="none";
 loveSection.style.display="flex";
 
 };
+const promiseSection = document.getElementById("promiseSection");
+const finalBtn = document.getElementById("finalBtn");
+
+
+promiseBtn.onclick = () => {
+
+loveSection.style.display="none";
+
+promiseSection.style.display="flex";
+
+};
+
+
+finalBtn.onclick = () => {
+
+promiseSection.style.display="none";
+
+alert("The final surprise is coming ❤️");
+
+};
