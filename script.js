@@ -173,3 +173,43 @@ star.style.animationDelay=Math.random()*2+"s";
 stars.appendChild(star);
 
 }
+// CONFETTI
+
+function launchConfetti(){
+
+const colors=[
+"#ff4f8b",
+"#ffb3d9",
+"#ffd166",
+"#7bdff2",
+"#b8f2e6"
+];
+
+for(let i=0;i<120;i++){
+
+const piece=document.createElement("div");
+
+piece.className="confetti";
+
+piece.style.left=Math.random()*100+"vw";
+
+piece.style.background=
+colors[Math.floor(Math.random()*colors.length)];
+
+piece.style.animationDuration=
+(3+Math.random()*2)+"s";
+
+piece.style.transform=
+"rotate("+Math.random()*360+"deg)";
+
+document.body.appendChild(piece);
+
+setTimeout(()=>{
+
+piece.remove();
+
+},5000);
+
+}
+
+}
