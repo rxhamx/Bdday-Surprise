@@ -109,3 +109,15 @@ behavior:"smooth"
 });
 
 };
+const loveSection = document.getElementById("loveSection");
+const letterBtn = document.getElementById("letterBtn");
+const promiseBtn = document.getElementById("promiseBtn");
+
+
+letterBtn.onclick = () => {
+
+letter.style.display="none";
+
+loveSection.style.display="flex";
+
+};
