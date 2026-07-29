@@ -190,7 +190,8 @@ transform:translateY(-15px);
 
 
 button{
-
+position:relative;
+z-index:20;
 border:none;
 
 padding:16px 40px;
