@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -9,16 +8,15 @@
 
 <title>Happy Birthday ❤️</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
 
 </head>
 
+
 <body>
+
 
 <div class="background"></div>
 
@@ -26,267 +24,217 @@
 
 <div class="petals"></div>
 
-<section class="intro">
+
+<section class="page intro" id="intro">
 
 <div class="glass">
 
-<div class="cake">
-🎂
-</div>
+<div class="cake">🎂</div>
 
 <h1>Hey Birthday Girl...</h1>
 
 <p>
-
-I made something just for you ❤️
-
+I made something special just for you ❤️
 </p>
 
-<button id="openBtn">
+<button onclick="showHero()">
 Open Your Birthday Gift 🎁
 </button>
 
 </div>
 
 </section>
-<section class="hero hidden" id="hero">
 
-<div class="glass hero-card">
 
-<h1>Happy Birthday</h1>
 
-<h2>My Love ❤️</h2>
+<section class="page hidden" id="hero">
+
+<div class="glass">
+
+<h1>
+Happy Birthday
+</h1>
+
+<h2>
+My Love ❤️
+</h2>
 
 <p>
 Today is all about celebrating the most amazing person in my life.
 </p>
 
-<button id="continueBtn">
+<button onclick="showLetter()">
 Continue ❤️
 </button>
 
 </div>
 
 </section>
-  <section class="letter hidden" id="letter">
 
-<div class="glass letter-card">
 
-<h2>A Letter For You ❤️</h2>
 
-<p id="typingText"></p>
 
-<button id="letterBtn" class="hidden">
+<section class="page hidden" id="letter">
+
+<div class="glass">
+
+<h2>A Letter For You 💌</h2>
+
+<p id="letterText"></p>
+
+<button onclick="showLove()" id="letterButton" class="hidden">
 Continue 🌸
 </button>
 
 </div>
 
 </section>
-  <section class="love-section hidden" id="loveSection">
 
-<div class="glass love-card">
 
-<h2>Things I Love About You ❤️</h2>
+
+
+
+<section class="page hidden" id="love">
+
+<div class="glass">
+
+<h2>
+Things I Love About You ❤️
+</h2>
+
 
 <div class="cards">
 
-<div class="flip-card">
-<div class="flip-inner">
 
-<div class="front">
+<div class="card">
 ❤️
 <br>
 Your Smile
 </div>
 
-<div class="back">
-Your smile has a way of making even normal moments feel special.
-</div>
 
-</div>
-</div>
-
-
-<div class="flip-card">
-<div class="flip-inner">
-
-<div class="front">
+<div class="card">
 🌸
 <br>
 Your Kindness
 </div>
 
-<div class="back">
-I love how much you care about the people around you.
-</div>
 
-</div>
-</div>
-
-
-<div class="flip-card">
-<div class="flip-inner">
-
-<div class="front">
+<div class="card">
 😂
 <br>
 Your Laugh
 </div>
 
-<div class="back">
-Your laugh is one of my favorite things to hear.
-</div>
 
-</div>
-</div>
-
-
-<div class="flip-card">
-<div class="flip-inner">
-
-<div class="front">
+<div class="card">
 💖
 <br>
 Your Heart
 </div>
 
-<div class="back">
-Your heart and the way you love is something special.
-</div>
 
-</div>
-</div>
-
-
-<div class="flip-card">
-<div class="flip-inner">
-
-<div class="front">
+<div class="card">
 ✨
 <br>
 Your Personality
 </div>
 
-<div class="back">
-You make moments more fun just by being yourself.
-</div>
 
-</div>
-</div>
-
-
-<div class="flip-card">
-<div class="flip-inner">
-
-<div class="front">
+<div class="card">
 🥹
 <br>
 Our Memories
 </div>
 
-<div class="back">
-Every memory we made is something I will always appreciate.
-</div>
-
-</div>
-</div>
-
 
 </div>
 
-<button id="promiseBtn">
+
+<button onclick="showPromises()">
 Continue 🌷
 </button>
 
+
 </div>
 
 </section>
-  <section class="promise-section hidden" id="promiseSection">
 
-<div class="glass promise-card">
 
-<h2>Our Little Promises 🤍</h2>
 
-<div class="promise-list">
 
-<div class="promise">
-🤍
-<h3>Honesty</h3>
+
+
+<section class="page hidden" id="promises">
+
+<div class="glass">
+
+<h2>
+Our Little Promises 🤍
+</h2>
+
+
 <p>
-Always being honest with each other and sharing what we feel.
+🤍 Always communicate honestly
 </p>
-</div>
 
-
-<div class="promise">
-💖
-<h3>Care</h3>
 <p>
-Always supporting each other and being there when we need it.
+💖 Always care for each other
 </p>
-</div>
 
-
-<div class="promise">
-🌸
-<h3>Memories</h3>
 <p>
-Creating more moments that we will look back on and smile.
+🌸 Keep making beautiful memories
 </p>
-</div>
 
-
-<div class="promise">
-✨
-<h3>Growing Together</h3>
 <p>
-Learning, improving, and becoming better together.
+✨ Grow together
 </p>
-</div>
 
-</div>
 
-<button id="finalBtn">
+<button onclick="showFinal()">
 One Last Surprise 🎁
 </button>
 
+
 </div>
 
 </section>
-  <section class="final-section hidden" id="finalSection">
 
-<div class="final-card">
 
-<div class="stars">
-✨ ✨ ✨
-</div>
 
-<h2>One Last Thing...</h2>
+
+
+
+<section class="page hidden" id="final">
+
+<div class="final">
+
+<h2>
+One Last Thing...
+</h2>
+
 
 <p id="finalText"></p>
 
 
-<div class="question hidden" id="question">
-
-<h3>
+<h3 class="hidden" id="question">
 Will you keep making memories with me? ❤️
 </h3>
 
-<button class="answerBtn">
+
+<button class="hidden" id="answer">
 Yes, always ❤️
 </button>
 
-<button class="answerBtn">
-Of course 🥹
-</button>
-
-</div>
 
 </div>
 
 </section>
+
+
+
 <script src="script.js"></script>
+
 
 </body>
 
