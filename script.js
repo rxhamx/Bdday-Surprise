@@ -45,7 +45,60 @@ const intro = document.querySelector(".intro");
 const hero = document.getElementById("hero");
 
 document.getElementById("openBtn").onclick = () => {
+const continueBtn = document.getElementById("continueBtn");
+const letter = document.getElementById("letter");
+const typingText = document.getElementById("typingText");
+const letterBtn = document.getElementById("letterBtn");
 
+const message = 
+`happy birthday my love ❤️
+
+today is a special day because it is the day someone truly amazing came into this world.
+
+i hope this year brings you happiness, peace, and everything your heart wishes for.
+
+thank you for every smile, every memory, and every moment we have shared together.
+
+i hope you always remember how special you are. ❤️`;
+
+continueBtn.onclick = () => {
+
+hero.style.display = "none";
+
+letter.style.display = "flex";
+
+typeWriter();
+
+};
+
+
+function typeWriter(){
+
+let i = 0;
+
+function typing(){
+
+if(i < message.length){
+
+typingText.innerHTML += message.charAt(i);
+
+i++;
+
+setTimeout(typing,40);
+
+}
+
+else{
+
+letterBtn.style.display="inline-block";
+
+}
+
+}
+
+typing();
+
+}
 intro.style.display = "none";
 
 hero.style.display = "flex";
