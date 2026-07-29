@@ -33,8 +33,12 @@ height:100%;
 
 background:
 
-radial-gradient(circle at top left,#ffd6e8,transparent 40%),
-radial-gradient(circle at bottom right,#ffeaf4,transparent 40%);
+linear-gradient(
+135deg,
+#fff5fa,
+#ffe0ef,
+#fff8fc
+);
 
 z-index:-3;
 
