@@ -336,19 +336,23 @@ margin-top:30px;
 
 .card{
 
-background:rgba(255,255,255,.45);
+background:rgba(255,255,255,.55);
+
+border-radius:22px;
 
 padding:25px;
-
-border-radius:20px;
 
 font-size:20px;
 
 color:#ff5c96;
 
-transition:.3s;
+transition:.35s;
 
-cursor:pointer;
+backdrop-filter:blur(8px);
+
+box-shadow:
+
+0 10px 20px rgba(0,0,0,.08);
 
 }
 
