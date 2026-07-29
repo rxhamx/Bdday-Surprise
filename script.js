@@ -1,3 +1,4 @@
+console.log("Script loaded successfully");
 // FLOATING HEARTS
 
 const hearts = document.querySelector(".hearts");
