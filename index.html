@@ -1,31 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Happy Birthday ❤️</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Great+Vibes&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
-
 </head>
-
 
 <body>
 
+<div id="background"></div>
 
-<div class="background"></div>
+<div id="hearts"></div>
 
-<div class="hearts"></div>
+<div id="petals"></div>
 
-<div class="petals"></div>
+<!-- INTRO -->
 
-
-<section class="page intro" id="intro">
+<section id="intro" class="screen active">
 
 <div class="glass">
 
@@ -33,209 +31,41 @@
 
 <h1>Hey Birthday Girl...</h1>
 
-<p>
-I made something special just for you ❤️
-</p>
+<p>I made something special just for you ❤️</p>
 
-<button onclick="showHero()">
-Open Your Birthday Gift 🎁
-</button>
+<button id="giftBtn">Open Your Birthday Gift 🎁</button>
 
 </div>
 
 </section>
 
+<!-- HERO -->
 
-
-<section class="page hidden" id="hero">
+<section id="hero" class="screen">
 
 <div class="glass">
 
-<h1>
-Happy Birthday
-</h1>
+<h1>Happy Birthday</h1>
 
-<h2>
-My Love ❤️
-</h2>
+<h2>My Love ❤️</h2>
 
 <p>
-Today is all about celebrating the most amazing person in my life.
+
+Today is all about celebrating someone who means so much to me.
+
 </p>
 
-<button onclick="showLetter()">
+<button id="continueBtn">
+
 Continue ❤️
+
 </button>
 
 </div>
 
 </section>
-
-
-
-
-<section class="page hidden" id="letter">
-
-<div class="glass">
-
-<h2>A Letter For You 💌</h2>
-
-<p id="letterText"></p>
-
-<button onclick="showLove()" id="letterButton" class="hidden">
-Continue 🌸
-</button>
-
-</div>
-
-</section>
-
-
-
-
-
-<section class="page hidden" id="love">
-
-<div class="glass">
-
-<h2>
-Things I Love About You ❤️
-</h2>
-
-
-<div class="cards">
-
-
-<div class="card">
-❤️
-<br>
-Your Smile
-</div>
-
-
-<div class="card">
-🌸
-<br>
-Your Kindness
-</div>
-
-
-<div class="card">
-😂
-<br>
-Your Laugh
-</div>
-
-
-<div class="card">
-💖
-<br>
-Your Heart
-</div>
-
-
-<div class="card">
-✨
-<br>
-Your Personality
-</div>
-
-
-<div class="card">
-🥹
-<br>
-Our Memories
-</div>
-
-
-</div>
-
-
-<button onclick="showPromises()">
-Continue 🌷
-</button>
-
-
-</div>
-
-</section>
-
-
-
-
-
-
-<section class="page hidden" id="promises">
-
-<div class="glass">
-
-<h2>
-Our Little Promises 🤍
-</h2>
-
-
-<p>
-🤍 Always communicate honestly
-</p>
-
-<p>
-💖 Always care for each other
-</p>
-
-<p>
-🌸 Keep making beautiful memories
-</p>
-
-<p>
-✨ Grow together
-</p>
-
-
-<button onclick="showFinal()">
-One Last Surprise 🎁
-</button>
-
-
-</div>
-
-</section>
-
-
-
-
-
-
-<section class="page hidden" id="final">
-
-<div class="final">
-
-<h2>
-One Last Thing...
-</h2>
-
-
-<p id="finalText"></p>
-
-
-<h3 class="hidden" id="question">
-Will you keep making memories with me? ❤️
-</h3>
-
-
-<button class="hidden" id="answer">
-Yes, always ❤️
-</button>
-
-
-</div>
-
-</section>
-
-
 
 <script src="script.js"></script>
 
-
 </body>
-
 </html>
