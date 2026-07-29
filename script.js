@@ -58,7 +58,11 @@ screen.classList.remove("active");
 
 });
 
+setTimeout(function(){
+
 document.getElementById(id).classList.add("active");
+
+},150);
 
 }
 
