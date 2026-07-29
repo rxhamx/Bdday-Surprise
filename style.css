@@ -277,11 +277,13 @@ p{
 
 font-size:18px;
 
-line-height:1.8;
+line-height:2;
 
 color:#555;
 
 margin:20px 0;
+
+letter-spacing:.3px;
 
 }
 
