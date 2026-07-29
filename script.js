@@ -141,3 +141,60 @@ promiseSection.style.display="none";
 alert("The final surprise is coming ❤️");
 
 };
+const finalSection = document.getElementById("finalSection");
+const finalText = document.getElementById("finalText");
+const question = document.getElementById("question");
+
+
+const finalMessage = 
+`Thank you...
+
+For every smile.
+
+For every laugh.
+
+For every memory.
+
+For being you.
+
+Happy Birthday ❤️`;
+
+
+finalBtn.onclick = () => {
+
+promiseSection.style.display="none";
+
+finalSection.style.display="flex";
+
+typeFinal();
+
+};
+
+
+function typeFinal(){
+
+let i = 0;
+
+function write(){
+
+if(i < finalMessage.length){
+
+finalText.innerHTML += finalMessage.charAt(i);
+
+i++;
+
+setTimeout(write,60);
+
+}
+
+else{
+
+question.style.display="block";
+
+}
+
+}
+
+write();
+
+}
