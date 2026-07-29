@@ -358,9 +358,17 @@ box-shadow:
 
 .card:hover{
 
-transform:translateY(-8px);
+transform:
+
+translateY(-10px)
+
+scale(1.04);
 
 background:white;
+
+box-shadow:
+
+0 20px 35px rgba(255,92,150,.25);
 
 }
 
