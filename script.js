@@ -1,200 +1,257 @@
-// Floating Hearts
+// FLOATING HEARTS
 
 const hearts = document.querySelector(".hearts");
 
-for (let i = 0; i < 20; i++) {
+for(let i = 0; i < 25; i++){
 
-const heart = document.createElement("span");
+let heart = document.createElement("span");
 
 heart.innerHTML = "❤";
 
-heart.style.left = Math.random()*100+"vw";
+heart.style.left = Math.random()*100 + "%";
 
-heart.style.animationDuration = (5+Math.random()*5)+"s";
+heart.style.fontSize =
+(15 + Math.random()*25) + "px";
 
-heart.style.fontSize = (15+Math.random()*20)+"px";
+heart.style.animationDuration =
+(5 + Math.random()*5) + "s";
 
-heart.style.animationDelay = Math.random()*5+"s";
+heart.style.animationDelay =
+Math.random()*5 + "s";
+
 
 hearts.appendChild(heart);
 
 }
 
-// Sakura Petals
+
+
+// FALLING PETALS
+
 
 const petals = document.querySelector(".petals");
 
-for (let i = 0; i < 25; i++) {
 
-const petal = document.createElement("span");
+for(let i = 0; i < 25; i++){
+
+let petal = document.createElement("span");
 
 petal.innerHTML = "🌸";
 
-petal.style.left = Math.random()*100+"vw";
+petal.style.left = Math.random()*100 + "%";
 
-petal.style.animationDuration = (8+Math.random()*6)+"s";
+petal.style.fontSize =
+(15 + Math.random()*20) + "px";
 
-petal.style.animationDelay = Math.random()*5+"s";
+petal.style.animationDuration =
+(7 + Math.random()*6) + "s";
 
-petal.style.fontSize = (18+Math.random()*15)+"px";
+petal.style.animationDelay =
+Math.random()*5 + "s";
+
 
 petals.appendChild(petal);
 
 }
-const intro = document.querySelector(".intro");
-const hero = document.getElementById("hero");
 
-document.getElementById("openBtn").onclick = () => {
-const continueBtn = document.getElementById("continueBtn");
+
+
+
+
+// SECTIONS
+
+
+const intro = document.getElementById("intro");
+const hero = document.getElementById("hero");
 const letter = document.getElementById("letter");
-const typingText = document.getElementById("typingText");
-const letterBtn = document.getElementById("letterBtn");
+const love = document.getElementById("love");
+const promises = document.getElementById("promises");
+const final = document.getElementById("final");
+
+
+
+
+
+// HERO
+
+
+function showHero(){
+
+intro.style.display="none";
+
+hero.style.display="flex";
+
+}
+
+
+
+
+
+// LETTER
+
+
+function showLetter(){
+
+hero.style.display="none";
+
+letter.style.display="flex";
+
+startTyping();
+
+}
+
+
+
+
+
+// TYPEWRITER
+
 
 const message = 
-`happy birthday my love ❤️
+`Happy Birthday ❤️
 
-today is a special day because it is the day someone truly amazing came into this world.
+I hope today reminds you how special you are.
 
-i hope this year brings you happiness, peace, and everything your heart wishes for.
+Thank you for all the memories, the smiles, and the moments we have shared.
 
-thank you for every smile, every memory, and every moment we have shared together.
+I truly appreciate having you in my life.
 
-i hope you always remember how special you are. ❤️`;
-
-continueBtn.onclick = () => {
-
-hero.style.display = "none";
-
-letter.style.display = "flex";
-
-typeWriter();
-
-};
+I hope this year brings you happiness, peace, and everything you wish for. ❤️`;
 
 
-function typeWriter(){
+
+function startTyping(){
+
+let text = document.getElementById("letterText");
+
+let button = document.getElementById("letterButton");
 
 let i = 0;
 
-function typing(){
+
+function type(){
 
 if(i < message.length){
 
-typingText.innerHTML += message.charAt(i);
+text.innerHTML += message.charAt(i);
 
 i++;
 
-setTimeout(typing,40);
+setTimeout(type,45);
 
 }
 
 else{
 
-letterBtn.style.display="inline-block";
+button.classList.remove("hidden");
 
 }
 
 }
 
-typing();
+
+type();
 
 }
-intro.style.display = "none";
-
-hero.style.display = "flex";
-
-window.scrollTo({
-top:0,
-behavior:"smooth"
-});
-
-};
-const loveSection = document.getElementById("loveSection");
-const letterBtn = document.getElementById("letterBtn");
-const promiseBtn = document.getElementById("promiseBtn");
 
 
-letterBtn.onclick = () => {
+
+
+
+
+// LOVE SECTION
+
+
+function showLove(){
 
 letter.style.display="none";
 
-loveSection.style.display="flex";
+love.style.display="flex";
 
-};
-const promiseSection = document.getElementById("promiseSection");
-const finalBtn = document.getElementById("finalBtn");
+}
 
 
-promiseBtn.onclick = () => {
-
-loveSection.style.display="none";
-
-promiseSection.style.display="flex";
-
-};
 
 
-finalBtn.onclick = () => {
-
-promiseSection.style.display="none";
-
-alert("The final surprise is coming ❤️");
-
-};
-const finalSection = document.getElementById("finalSection");
-const finalText = document.getElementById("finalText");
-const question = document.getElementById("question");
 
 
-const finalMessage = 
+
+// PROMISES
+
+
+function showPromises(){
+
+love.style.display="none";
+
+promises.style.display="flex";
+
+}
+
+
+
+
+
+
+
+// FINAL
+
+
+const finalMessage =
+
 `Thank you...
 
 For every smile.
 
-For every laugh.
-
 For every memory.
 
-For being you.
+For every moment.
+
+I hope we keep creating beautiful memories together.
 
 Happy Birthday ❤️`;
 
 
-finalBtn.onclick = () => {
 
-promiseSection.style.display="none";
+function showFinal(){
 
-finalSection.style.display="flex";
+promises.style.display="none";
 
-typeFinal();
+final.style.display="flex";
 
-};
+
+let text = document.getElementById("finalText");
+
+let question = document.getElementById("question");
+
+let answer = document.getElementById("answer");
+
+
+let i=0;
 
 
 function typeFinal(){
 
-let i = 0;
-
-function write(){
-
 if(i < finalMessage.length){
 
-finalText.innerHTML += finalMessage.charAt(i);
+text.innerHTML += finalMessage.charAt(i);
 
 i++;
 
-setTimeout(write,60);
+setTimeout(typeFinal,60);
 
 }
 
 else{
 
-question.style.display="block";
+question.classList.remove("hidden");
+
+answer.classList.remove("hidden");
 
 }
 
 }
 
-write();
+
+typeFinal();
 
 }
