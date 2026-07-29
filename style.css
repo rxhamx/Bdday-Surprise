@@ -138,15 +138,40 @@ animation:petalFall linear infinite;
 
 @keyframes petalFall{
 
+0%{
+
+transform:
+translateY(-50px)
+translateX(0px)
+rotate(0deg);
+
+opacity:0;
+
+}
+
+15%{
+
+opacity:1;
+
+}
+
+50%{
+
+transform:
+translateY(50vh)
+translateX(30px)
+rotate(180deg);
+
+}
+
 100%{
 
 transform:
-
-translateY(120vh)
-
-translateX(80px)
-
+translateY(110vh)
+translateX(-50px)
 rotate(360deg);
+
+opacity:0;
 
 }
 
