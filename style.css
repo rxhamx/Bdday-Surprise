@@ -226,7 +226,48 @@ box-shadow:0 15px 30px rgba(255,100,160,.4);
 /* HEARTS */
 
 
-.hearts{
+.hearts,
+.petals{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100vw;
+height:100vh;
+
+overflow:hidden;
+
+pointer-events:none;
+
+z-index:10;
+
+}
+
+
+.hearts span{
+
+position:absolute;
+
+bottom:-50px;
+
+color:#ff7fb2;
+
+animation:heart 8s linear infinite;
+
+}
+
+
+.petals span{
+
+position:absolute;
+
+top:-50px;
+
+animation:petal 10s linear infinite;
+
+}
 
 position:fixed;
 
