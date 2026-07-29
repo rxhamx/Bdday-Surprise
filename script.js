@@ -1,25 +1,20 @@
-console.log("Script loaded successfully");
-// FLOATING HEARTS
+// HEARTS
 
 const hearts = document.querySelector(".hearts");
 
-for(let i = 0; i < 25; i++){
+for(let i=0;i<20;i++){
 
-let heart = document.createElement("span");
+const heart=document.createElement("span");
 
-heart.innerHTML = "❤";
+heart.innerHTML="❤️";
 
-heart.style.left = Math.random()*100 + "%";
+heart.style.left=Math.random()*100+"vw";
 
-heart.style.fontSize =
-(15 + Math.random()*25) + "px";
+heart.style.fontSize=(15+Math.random()*20)+"px";
 
-heart.style.animationDuration =
-(5 + Math.random()*5) + "s";
+heart.style.animationDuration=(5+Math.random()*5)+"s";
 
-heart.style.animationDelay =
-Math.random()*5 + "s";
-
+heart.style.animationDelay=Math.random()*5+"s";
 
 hearts.appendChild(heart);
 
@@ -27,29 +22,23 @@ hearts.appendChild(heart);
 
 
 
-// FALLING PETALS
+// PETALS
 
+const petals=document.querySelector(".petals");
 
-const petals = document.querySelector(".petals");
+for(let i=0;i<20;i++){
 
+const petal=document.createElement("span");
 
-for(let i = 0; i < 25; i++){
+petal.innerHTML="🌸";
 
-let petal = document.createElement("span");
+petal.style.left=Math.random()*100+"vw";
 
-petal.innerHTML = "🌸";
+petal.style.fontSize=(15+Math.random()*15)+"px";
 
-petal.style.left = Math.random()*100 + "%";
+petal.style.animationDuration=(8+Math.random()*5)+"s";
 
-petal.style.fontSize =
-(15 + Math.random()*20) + "px";
-
-petal.style.animationDuration =
-(7 + Math.random()*6) + "s";
-
-petal.style.animationDelay =
-Math.random()*5 + "s";
-
+petal.style.animationDelay=Math.random()*5+"s";
 
 petals.appendChild(petal);
 
@@ -57,202 +46,98 @@ petals.appendChild(petal);
 
 
 
-
-
 // SECTIONS
 
+const screens=document.querySelectorAll(".screen");
 
-const intro = document.getElementById("intro");
-const hero = document.getElementById("hero");
-const letter = document.getElementById("letter");
-const love = document.getElementById("love");
-const promises = document.getElementById("promises");
-const final = document.getElementById("final");
+function showScreen(id){
 
+screens.forEach(screen=>{
 
+screen.classList.remove("active");
 
+});
 
-
-// HERO
-
-
-function showHero(){
-
-intro.style.display="none";
-
-hero.style.display="flex";
+document.getElementById(id).classList.add("active");
 
 }
 
 
 
+// BUTTONS
 
+document.getElementById("openBtn").onclick=()=>{
 
-// LETTER
+showScreen("hero");
 
+};
 
-function showLetter(){
+document.getElementById("nextBtn").onclick=()=>{
 
-hero.style.display="none";
+showScreen("letter");
 
-letter.style.display="flex";
+typeLetter();
 
-startTyping();
+};
 
-}
+document.getElementById("loveBtn").onclick=()=>{
 
+showScreen("love");
 
+};
+
+document.getElementById("promiseBtn").onclick=()=>{
+
+showScreen("promise");
+
+};
+
+document.getElementById("finalBtn").onclick=()=>{
+
+showScreen("final");
+
+};
 
 
 
 // TYPEWRITER
 
+const message=`Happy Birthday ❤️
 
-const message = 
-`Happy Birthday ❤️
+I hope today brings you happiness, peace, and lots of smiles.
 
-I hope today reminds you how special you are.
+Thank you for every memory we've shared together.
 
-Thank you for all the memories, the smiles, and the moments we have shared.
+You are truly special to me, and I hope this year brings you everything your heart wishes for.
 
-I truly appreciate having you in my life.
+Happy Birthday once again. ❤️`;
 
-I hope this year brings you happiness, peace, and everything you wish for. ❤️`;
+let started=false;
 
+function typeLetter(){
 
+if(started) return;
 
-function startTyping(){
+started=true;
 
-let text = document.getElementById("letterText");
-
-let button = document.getElementById("letterButton");
-
-let i = 0;
-
-
-function type(){
-
-if(i < message.length){
-
-text.innerHTML += message.charAt(i);
-
-i++;
-
-setTimeout(type,45);
-
-}
-
-else{
-
-button.classList.remove("hidden");
-
-}
-
-}
-
-
-type();
-
-}
-
-
-
-
-
-
-// LOVE SECTION
-
-
-function showLove(){
-
-letter.style.display="none";
-
-love.style.display="flex";
-
-}
-
-
-
-
-
-
-
-// PROMISES
-
-
-function showPromises(){
-
-love.style.display="none";
-
-promises.style.display="flex";
-
-}
-
-
-
-
-
-
-
-// FINAL
-
-
-const finalMessage =
-
-`Thank you...
-
-For every smile.
-
-For every memory.
-
-For every moment.
-
-I hope we keep creating beautiful memories together.
-
-Happy Birthday ❤️`;
-
-
-
-function showFinal(){
-
-promises.style.display="none";
-
-final.style.display="flex";
-
-
-let text = document.getElementById("finalText");
-
-let question = document.getElementById("question");
-
-let answer = document.getElementById("answer");
-
+const text=document.getElementById("typeText");
 
 let i=0;
 
+function type(){
 
-function typeFinal(){
+if(i<message.length){
 
-if(i < finalMessage.length){
-
-text.innerHTML += finalMessage.charAt(i);
+text.innerHTML+=message.charAt(i);
 
 i++;
 
-setTimeout(typeFinal,60);
-
-}
-
-else{
-
-question.classList.remove("hidden");
-
-answer.classList.remove("hidden");
+setTimeout(type,35);
 
 }
 
 }
 
-
-typeFinal();
+type();
 
 }
