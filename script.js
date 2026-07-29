@@ -72,6 +72,8 @@ document.getElementById(id).classList.add("active");
 
 document.getElementById("openBtn").onclick=()=>{
 
+launchConfetti();
+
 showScreen("hero");
 
 };
