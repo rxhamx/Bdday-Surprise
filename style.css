@@ -175,7 +175,7 @@ display:flex;
 /* ---------- GLASS CARD ---------- */
 
 .glass{
-
+animation: floatCard 5s ease-in-out infinite;
 background:rgba(255,255,255,.35);
 
 backdrop-filter:blur(18px);
