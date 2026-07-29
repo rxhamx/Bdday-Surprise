@@ -147,7 +147,7 @@ text.innerHTML+=message.charAt(i);
 
 i++;
 
-setTimeout(type,35);
+setTimeout(type,45);
 
 }
 
