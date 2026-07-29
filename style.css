@@ -577,7 +577,103 @@ backdrop-filter:blur(15px);
 
 
 .front{
+/* PROMISE SECTION */
 
+.promise-section{
+
+min-height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+padding:40px;
+
+}
+
+
+.promise-card{
+
+max-width:900px;
+
+text-align:center;
+
+}
+
+
+.promise-card h2{
+
+font-family:'Great Vibes',cursive;
+
+font-size:60px;
+
+color:#ff6fae;
+
+margin-bottom:40px;
+
+}
+
+
+.promise-list{
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:25px;
+
+}
+
+
+.promise{
+
+background:rgba(255,255,255,.35);
+
+padding:30px;
+
+border-radius:25px;
+
+backdrop-filter:blur(15px);
+
+transition:.3s;
+
+}
+
+
+.promise:hover{
+
+transform:translateY(-8px);
+
+}
+
+
+.promise h3{
+
+color:#ff6fae;
+
+margin:10px 0;
+
+}
+
+
+.promise p{
+
+font-size:16px;
+
+}
+
+
+@media(max-width:700px){
+
+.promise-list{
+
+grid-template-columns:1fr;
+
+}
+
+}
 font-size:22px;
 
 color:#ff6fae;
